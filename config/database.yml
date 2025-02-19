@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: db          # ← ここで Postgres コンテナを指定
+  username: postgres
+  password: password
+
+development:
+  <<: *default
+  database: rails_restapi_development
+
+test:
+  <<: *default
+  database: rails_restapi_test
