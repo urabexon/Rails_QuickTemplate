@@ -1,24 +1,59 @@
-# Rails_RESTAPI
+# Rails_QuickTemplate
+A Rails **API-only** starter template designed for **small teams** and
+**maintainable backend development**.<br>
+This template prioritizes clarity, conventions, and team scalability
+over rapid prototyping.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+- Ruby 3.4.x
+- Rails 8.x
+- PostgreSQL
+- Docker (optional, for database)
 
-Things you may want to cover:
+## Quick Start
 
-* Ruby version
+### 1. Install dependencies
+```bash
+bundle install
+```
 
-* System dependencies
+### 2. Prepare database
+```bash
+bin/rails db:prepare
+```
 
-* Configuration
+### 3. Start server
+```bash
+bin/rails s
+```
 
-* Database creation
+Server will be available at:
+http://localhost:3000
 
-* Database initialization
+## Database
+This project uses PostgreSQL.
 
-* How to run the test suite
+### Local setup
+- PostgreSQL running on localhost:5432
 
-* Services (job queues, cache servers, search engines, etc.)
+### Docker (optional)
+You can run PostgreSQL using Docker for better environment consistency.<br>
+(See docker-compose configuration if enabled.)
 
-* Deployment instructions
+Database connection settings are defined in config/database.yml.
 
-* ...
+## Project Policy
+- API-only Rails application
+- Designed for small team development
+- Opinionated defaults to avoid bikeshedding
+- Docker is optional, not required
+- Deployment strategy is intentionally flexible
+
+## Deployment
+This template does not enforce a single deployment method.
+
+Recommended options:
+- Render / Fly.io (small teams)
+- AWS ECS / GCP Cloud Run (production / organization use)
+
+Choose based on your team and infrastructure requirements.
